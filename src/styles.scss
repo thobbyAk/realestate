@@ -1,1 +1,86 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.primaryButton{
+    border-radius: 5px;
+    background:  #003D69;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #fff;
+    border: none;
+    height: 48px;
+    padding: 10px 16px;
+    outline: none;
+    &:focus{
+        outline: none;
+    }
+}
+
+.secondaryButton{
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #003D69;
+    background: transparent;
+    border: none;
+    height: 48px;
+    padding: 10px 16px;
+    outline: none;
+    &:focus{
+        outline: none;
+    }
+
+}
+
+.tetiaryButton{
+    border-radius: 5px;
+    background:  #BB7944;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #fff;
+    border: none;
+    height: 48px;
+    padding: 10px 16px;
+    outline: none;
+    &:focus{
+        outline: none;
+    }
+}
+
+.input-form{
+  
+    border-radius: 5px;
+    border: 1px solid  #E2E2E2;
+    background:  #FFF;
+    color: #7B7B7B;
+    height: 48px;
+    padding: 10px 16px;
+        font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    outline: none;
+    &:focus{
+        outline: none;
+    }
+    }
+
+.input-label{
+    color: var(--Secoundary-Text, #7B7B7B);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}

@@ -1,0 +1,45 @@
+.header{
+    background-color: #fff;
+    &__banner{
+    background:  #BB7944;
+        &--child{
+            border-right: 1px solid #fff;
+        }
+    p{
+        color: #fff;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+
+    }
+    }
+    .nav-item{
+        .nav-link{
+            color: #003D69;
+            font-size: 16px;
+            font-weight: 700;
+            &:hover{
+                color: #BB7944;
+                font-size: 16px;
+                font-weight: 700;
+               
+            }
+            &:active{
+                color: #BB7944;
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .logo{
+        width: 180px;
+        height: 40px;
+    }
+}
+
+.line{
+    border-left: 2px solid #E2E2E2;
+    height: 51px;
+  
+}

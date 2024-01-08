@@ -1,0 +1,207 @@
+.landing{
+    min-height: 100vh;
+    &__hero{
+        background-image: url('../../../assets/images/housee.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+        &--ad{
+            background-color: #fff;
+            border-radius: 20px;
+            .title{
+                font-size: 52px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 60px;
+                color: #003D69;
+            }
+            .sub{
+                color:  #7B7B7B;
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+            }
+        }
+        &--search{
+            border-radius: 20px;
+        }
+    }
+    &__about{
+        &--head{
+            color:  #BB7944;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 0.16px;
+        }
+        &--subhead{
+            color:  #003D69;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        &--body{
+            color: #7B7B7B;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            border-left: 3px solid #BB7944;
+        }
+    }
+
+    &__viewCard{
+        .body{
+            border: 1px solid #7B7B7B;
+            border-top: none;
+            border-radius: 15px;
+            .div{
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 700;
+                color: #003D69;
+                line-height: normal;
+            }
+        }
+    }
+
+    &__properties{
+        &--title{
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-align: center;
+            color: #BB7944;
+
+        }
+
+        &--sub{
+            color: var(--Brand-Secondary, #003D69);
+        text-align: center;
+        font-family: Poppins;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        }
+        &--testCard{
+            border-radius: 20px;
+            background:  #FFF;
+            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
+
+            .text{
+                color:  #7B7B7B;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; 
+            }
+            .title{
+                color:  #003D69;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+            .value{
+                color: #7B7B7B;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+    }
+
+    &__newsLetter{
+        border-radius: 20px;
+        background:  #F9FAFB;
+        border-radius: 20px;
+            width: 100%;
+            display: grid;
+            row-gap: 0px;
+            column-gap: 0px;
+            grid-template-columns: auto auto;
+            margin-bottom: 24px;
+        
+        .news{
+        border-radius: 20px;
+         
+            img{
+            border-radius: 20px;
+            height: 350px;
+
+            }
+
+            h3{
+                color: #003D69;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+            p{
+                color:  #7B7B7B;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 22.4px */
+            }
+        }
+    }
+    &__blueCard{
+        border-radius: 20px;
+        background:  #003D69;
+        p{
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        h3{
+            font-family: 'Poppins';
+            font-size: 28px;
+            font-style: normal;
+            margin: 0;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .landing{
+        &__hero{
+            background-image: url('../../../assets/images/housee.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            min-height: 60vh;
+
+            &--ad{
+                background-color: #fff;
+                border-radius: 20px;
+                .title{
+                    font-size: 26px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 30px;
+                    color: #003D69;
+                }
+                .sub{
+                    color:  #7B7B7B;
+                    font-family: Poppins;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 400;
+                }
+            }
+        }
+
+    }
+    
+}

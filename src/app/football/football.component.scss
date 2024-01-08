@@ -1,0 +1,306 @@
+.football{
+    min-height: 100vh;
+    background-image: url('../../assets/images/club/fifaa.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__header{
+        background: rgba(31, 57, 97, 0.62);
+        backdrop-filter: blur(5.5px);
+        p{
+            color: #fff;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            margin: 0;
+        }
+    }
+    &__country{
+        background-color: #273652A8;
+        p{
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 160%; 
+            color: #fff;
+        }
+        span{
+            color: #fff;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+        }
+    }
+
+    &__rate{
+        background-color: #101a2d;
+        p{
+            line-height: 120%;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+        }
+    }
+    &__players{
+        width: 100%;
+        max-height: 50vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        &--card{
+            height: 110px;
+            border: 1px solid rgba(50, 65, 84, 0.60);
+            background: rgba(26, 37, 54, 0.74);
+            backdrop-filter: blur(2px);
+            cursor: pointer;
+            &:hover{
+                border-right: 1px solid rgba(50, 65, 84, 0.60);
+                background: rgba(227, 228, 229, 0.29);
+                backdrop-filter: blur(2px);
+            }
+            .name{
+                p{
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    color: #fff;
+                }
+                span{
+                    color: #fff;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+            .playerimage{
+                position: absolute;
+                bottom: 0%;
+            }
+            .position{
+                width: 15px;
+                height: 15px;
+                border: 2px solid white;
+                border-radius: 50%;
+            }   
+            .property{
+                right: 35%;
+                position: relative;
+                top: 14%;
+            }
+
+        }
+        &--card::-webkit-scrollbar {
+            width: 12px; /* Set width of the scrollbar */
+          }
+      
+          &--card::-webkit-scrollbar-thumb {
+            background-color: red; /* Set background color of the scrollbar thumb */
+            border-radius: 6px; /* Set border radius of the scrollbar thumb */
+          }
+      
+          &--card::-webkit-scrollbar-track {
+            background-color: #f0f0f0; /* Set background color of the scrollbar track */
+          }
+      
+    }
+    &__reportheader{
+        color: #FFF;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        border-bottom: 2px solid #50AD7A;
+       
+    }
+    .subtext{
+        color: #FFF;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .rate{
+        padding: 8px;
+        background-color: #058E6E;
+        color: #fff;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .faded{
+        background: rgba(31, 57, 97, 0.62);
+    }
+    &__summary{
+        color: #FFF;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    &__details{
+        border-radius: 4px;
+        background: #10233E;
+        max-height: 63vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+    
+        &--top{
+            height: 170px;
+
+            .pic{
+                height: 130px;
+
+            }
+            .height{
+                color: #FFF;
+                font-size: 50.483px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+            .name{
+                color: #FFF;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+            p{
+                color: #FFF;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+            .club{
+                height: 38px;
+            }
+            .country{
+                text-align: right;
+                
+            }
+            .age{
+                color: #FFF;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+            .leg{
+                
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+          
+        }
+    }
+    .scout{
+        font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            color: #fff;
+            text-align: left;
+
+    }
+}
+
+.top{
+    width: 100%;
+    display: grid;
+    row-gap: 0px;
+    column-gap: 0px;
+    grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+    margin-bottom: 24px;
+}
+.po{
+    color: #fff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: #273652A8;
+}
+.nav-tabs{
+    border: none;
+}
+.nav-link{
+    background-color: transparent;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    color: #fff;
+    line-height: 160%;
+    &:hover{
+        border-top: none;
+        border-left: none;
+    color: #fff;
+
+        border-right: none;
+        border-bottom: 3px solid #F59F39;
+        background-color: transparent;
+    }
+    &:focus{
+    color: #fff;
+
+        outline: none;
+        background-color: transparent;
+    }
+}
+.nav-link.active{
+    color: #fff;
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid #F59F39;
+    background-color: transparent;
+
+}
+.line{
+    width: 100%;
+    height: 2px;
+   
+    border: 0.5px solid rgba(50, 65, 84, 0.60);
+}
+.positioncolor{
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 50%;
+} 
+
+.poview{
+    color: #fff;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.club-grid{
+    width: 100%;
+    display: grid;
+    row-gap: 0px;
+    column-gap: 0px;
+    grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+    margin-bottom: 24px;
+}
+
+.controls{
+    cursor: pointer;
+    color: #FFF;
+    font-size: 11.016px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; 
+}

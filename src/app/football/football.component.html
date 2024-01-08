@@ -1,0 +1,472 @@
+<div class="football p-4">
+  <div class="row">
+    <div class="col-3">
+      <div
+        class="football__header p-3 d-flex flex-row justify-content-around align-items-center"
+      >
+        <img src="../../assets/images/club/chelsea.svg" alt="alt" />
+        <p>THOBBY</p>
+        <img src="../../assets/images/club/crown.svg" alt="alt" />
+      </div>
+    </div>
+  </div>
+  <p class="scout my-3">SCOUT REPORT</p>
+
+  <div class="row">
+    <div class="col-7">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button
+            class="nav-link active"
+            id="nav-home-tab"
+            data-toggle="tab"
+            data-target="#nav-home"
+            type="button"
+            role="tab"
+            aria-controls="nav-home"
+            aria-selected="true"
+          >
+            ALL
+          </button>
+          <button
+            class="nav-link"
+            id="nav-profile-tab"
+            data-toggle="tab"
+            data-target="#"
+            type="button"
+            role="tab"
+            aria-controls="nav-profile"
+            aria-selected="false"
+          >
+            DETAILED INFO
+          </button>
+
+          <button
+            class="nav-link"
+            id="nav-att-tab"
+            data-toggle="tab"
+            data-target="#nav-att"
+            type="button"
+            role="tab"
+            aria-controls="nav-att"
+            aria-selected="false"
+          >
+            ATT
+          </button>
+          <button
+            class="nav-link"
+            id="nav-mid-tab"
+            data-toggle="tab"
+            data-target="#nav-mid"
+            type="button"
+            role="tab"
+            aria-controls="nav-mid"
+            aria-selected="false"
+          >
+            MID
+          </button>
+          <button
+            class="nav-link"
+            id="nav-def-tab"
+            data-toggle="tab"
+            data-target="#nav-def"
+            type="button"
+            role="tab"
+            aria-controls="nav-def"
+            aria-selected="false"
+          >
+            DEF
+          </button>
+          <button
+            class="nav-link"
+            id="nav-gk-tab"
+            data-toggle="tab"
+            data-target="#nav-gk"
+            type="button"
+            role="tab"
+            aria-controls="nav-gk"
+            aria-selected="false"
+          >
+            GK
+          </button>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="tab-content" id="nav-tabContent">
+    <div
+      class="tab-pane fade show active"
+      id="nav-home"
+      role="tabpanel"
+      aria-labelledby="nav-home-tab"
+    >
+      <div class="row mt-1">
+        <div class="col-6">
+          <div
+            class="football__country d-flex flex-row justify-content-between p-2"
+          >
+            <p>AYODELE JOSEPH</p>
+            <div class="d-flex flex-column">
+              <img src="../../assets/images/club/Nigeria.svg" alt="alt" />
+              <span class="mt-1 text-center">NIgeria</span>
+            </div>
+          </div>
+          <div class="football__rate">
+            <div class="d-flex flex-row align-items-center p-2">
+              <p class="mb-0 text-white">Judgement:</p>
+              <div class="d-flex flex-row ml-2">
+                <img
+                  src="../../assets/images/club/Star.png"
+                  alt="alt"
+                  class="mr-2"
+                />
+                <img
+                  src="../../assets/images/club/Star.png"
+                  alt="alt"
+                  class="mr-2"
+                />
+                <img
+                  src="../../assets/images/club/Star.png"
+                  alt="alt"
+                  class="mr-2"
+                />
+                <img
+                  src="../../assets/images/club/Star.png"
+                  alt="alt"
+                  class="mr-2"
+                />
+                <img
+                  src="../../assets/images/club/Star.png"
+                  alt="alt"
+                  class="mr-2"
+                />
+              </div>
+            </div>
+            <p></p>
+          </div>
+
+          <div class="football__players">
+            <div class="rer">
+              <div class="top">
+                <div
+                  (click)="setSelectedPlayer(player)"
+                  class="football__players--card"
+                  *ngFor="let player of players; let i = index"
+                >
+                  <div class="d-flex flex-row justify-content-between">
+                    <div>
+                      <img
+                        [src]="player?.avatar"
+                        alt="playerimage"
+                        class="playerimage"
+                      />
+                    </div>
+                    <div class="d-flex flex-column">
+                      <div class="d-flex justify-content-end mb-1">
+                        <img
+                          [src]="player.club"
+                          alt="playerimage"
+                          class="club mt-1"
+                        />
+                      </div>
+                      <div class="d-flex flex-row property">
+                        <div class="d-flex flex-column name">
+                          <p>{{ player.name }}</p>
+                          <span>Age: {{ player.age }}</span>
+                        </div>
+
+                        <div class="d-flex align-items-end ml-3 flex-row">
+                          <div
+                            class="position"
+                            [style.background-color]="player.positioncolor"
+                          ></div>
+                          <span class="po ml-2">{{ player.position }}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="football__details p-2">
+            <div class="football__details--top">
+              <div class="row">
+                <div class="col-5">
+                  <div class="d-flex">
+                    <img
+                      [src]="selectedPlayer.avatar"
+                      alt="picture"
+                      class="pic"
+                    />
+                    <div class="d-flex align-items-end px-3">
+                      <h1 class="height">
+                        {{ selectedPlayer.property?.rate }}
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-7">
+                  <div class="club-grid">
+                    <div>
+                      <h3 class="name">
+                        {{ selectedPlayer.name }}<br />
+                        {{ selectedPlayer.lastName }}
+                      </h3>
+                    </div>
+                    <div class="d-flex mb-2">
+                      <div class="">
+                        <p>{{ selectedPlayer.clubName }} FC</p>
+                        <!-- <img src="/assets/images/club/spain.png" alt="club" /> -->
+                      </div>
+                      <img
+                        [src]="selectedPlayer.club"
+                        class="ml-auto"
+                        alt="country"
+                      />
+                    </div>
+                    <div class="d-flex flex-row">
+                      <div class="text-white age">
+                        Age <br />
+                        {{ selectedPlayer.age }}
+                      </div>
+
+                      <div class="d-flex align-items-end ml-3 flex-row">
+                        <div
+                          class="positioncolor"
+                          [style.background-color]="
+                            selectedPlayer.positioncolor
+                          "
+                        ></div>
+                        <span class="poview ml-2">{{
+                          selectedPlayer.position
+                        }}</span>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="text-right leg text-white">
+                        Height: {{ selectedPlayer.property?.height }}cm
+                      </p>
+                      <p class="text-right leg text-white">
+                        Preferred Foot: Left
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row justify-content-between"></div>
+
+                  <div class="d-flex flex-row justify-content-between"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="line"></div>
+            <div class="p-3">
+              <div class="row">
+                <div class="col-6">
+                  <div class="football__reportheader w-100">
+                    <svg
+                      class="mr-2"
+                      width="20"
+                      height="21"
+                      viewBox="0 0 20 21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        y="0.5"
+                        width="20"
+                        height="20"
+                        rx="10"
+                        fill="#50AD7A"
+                      />
+                      <path
+                        d="M17.5001 6.33345L7.50008 16.3334L2.91675 11.7501L4.09175 10.5751L7.50008 13.9751L16.3251 5.15845L17.5001 6.33345Z"
+                        fill="white"
+                      />
+                    </svg>
+                    Report Complete
+                  </div>
+                  <div class="mt-4">
+                    <p class="subtext">OVERALL</p>
+
+                    <div
+                      class="p-2 d-flex justify-content-between align-items-center"
+                    >
+                      <p class="subtext">VALUE</p>
+                      <p class="subtext">WAGE</p>
+                    </div>
+                    <div
+                      class="p-2 d-flex justify-content-between align-items-center faded"
+                    >
+                      <p class="subtext">
+                        {{ selectedPlayer.property?.value }}
+                      </p>
+                      <p class="subtext">{{ selectedPlayer.property.wage }}</p>
+                    </div>
+                    <div
+                      class="p-2 d-flex justify-content-between align-items-center"
+                    >
+                      <p class="subtext">RELEASE CLAUSE</p>
+                    </div>
+                    <div
+                      class="p-2 faded d-flex justify-content-between align-items-center"
+                    >
+                      <p class="subtext">
+                        {{ selectedPlayer.property?.release }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="football__summary">Summary</div>
+
+                  <div class="mt-4">
+                    <div
+                      class="p-2 d-flex justify-content-between align-items-center"
+                    >
+                      <p class="subtext">Athleticism</p>
+                      <p class="rate">
+                        {{ selectedPlayer.property?.athleticism }}
+                      </p>
+                    </div>
+                    <div
+                      class="p-2 d-flex justify-content-between align-items-center faded"
+                    >
+                      <p class="subtext">Technical Ability</p>
+                      <p class="rate">
+                        {{ selectedPlayer.property?.technicalAbility }}
+                      </p>
+                    </div>
+                    <div
+                      class="p-2 d-flex justify-content-between align-items-center"
+                    >
+                      <p class="subtext">Shooting</p>
+                      <p class="rate">
+                        {{ selectedPlayer.property?.shooting }}
+                      </p>
+                    </div>
+                    <div
+                      class="p-2 faded d-flex justify-content-between align-items-center"
+                    >
+                      <p class="subtext">Passing</p>
+                      <p class="rate">{{ selectedPlayer.property?.passing }}</p>
+                    </div>
+                    <div
+                      class="p-2 d-flex justify-content-between align-items-center"
+                    >
+                      <p class="subtext">Defending</p>
+                      <p class="rate">
+                        {{ selectedPlayer.property?.defending }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-row controls mt-4">
+        <div class="mr-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="26"
+            viewBox="0 0 26 26"
+            fill="none"
+          >
+            <circle
+              cx="12.7786"
+              cy="12.7786"
+              r="12.3793"
+              fill="black"
+              stroke="#FF6666"
+              stroke-width="0.798662"
+            />
+            <circle
+              cx="12.7788"
+              cy="12.7785"
+              r="7.98662"
+              stroke="#FF6666"
+              stroke-width="1.59732"
+            />
+          </svg>
+
+          Back
+        </div>
+        <div class="mr-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="27"
+            height="26"
+            viewBox="0 0 27 26"
+            fill="none"
+          >
+            <circle
+              cx="13.3684"
+              cy="12.7786"
+              r="12.3793"
+              fill="black"
+              stroke="#FF69F8"
+              stroke-width="0.798662"
+            />
+            <rect
+              x="6.97933"
+              y="6.38924"
+              width="12.7786"
+              height="12.7786"
+              stroke="#FF69F8"
+              stroke-width="1.59732"
+            />
+          </svg>
+          Remove From Report
+        </div>
+        <div class="mr-2">
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 26 26"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="12.9588"
+              cy="12.7786"
+              r="12.3793"
+              fill="black"
+              stroke="#40E2A0"
+              stroke-width="0.798662"
+            />
+            <path
+              d="M13.6506 5.19125L12.959 3.99325L12.2673 5.19125L6.04234 15.9732L5.35068 17.1712H6.734H19.1839H20.5672L19.8756 15.9732L13.6506 5.19125Z"
+              stroke="#40E2A0"
+              stroke-width="1.59732"
+            />
+          </svg>
+
+          Change View
+        </div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="nav-profile"
+      role="tabpanel"
+      aria-labelledby="nav-profile-tab"
+    >
+      ...
+    </div>
+    <div
+      class="tab-pane fade"
+      id="nav-contact"
+      role="tabpanel"
+      aria-labelledby="nav-contact-tab"
+    >
+      ...
+    </div>
+  </div>
+</div>
