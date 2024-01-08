@@ -6,9 +6,7 @@ This project contains a responsive landing page for a real estate firm and a tra
 
 ### Deployment
 
-the project is deployed using vercel and the link to the real estate landing page can be found [here]() and [here](https://real-estate-football.vercel.app/#/football) respectively
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.9.
+the project is deployed using vercel and the link to the real estate landing page can be found [here](https://realestate-one-red.vercel.app) and [here](https://realestate-one-red.vercel.app/football) respectively
 
 ### Technologies Used
 
